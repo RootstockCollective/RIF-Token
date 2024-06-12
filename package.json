@@ -1,0 +1,20 @@
+{
+  "name": "rif-token-contracts",
+  "version": "1.0.0",
+  "description": "RIF Token Contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riflabs/RIF-Token.git"
+  },
+  "keywords": [
+    "solidity",
+    "contracts",
+    "RIF"
+  ],
+  "author": "Rootstock Labs",
+  "license": "MIT"
+}
