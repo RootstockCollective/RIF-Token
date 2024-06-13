@@ -9,11 +9,11 @@ library AddressLinker   {
 
     uint constant BITCOIN  = 0;
     uint constant ETHEREUM = 1;
-
+    // RIF DAO: Visibility changed from public to internal
     function acceptLinkedRskAddress(
         address buyerAddress, uint chainId,
         string redeemAddressAsString, uint8 sig_v,
-        bytes32 sig_r, bytes32 sig_s) public pure returns (bool) {
+        bytes32 sig_r, bytes32 sig_s) internal pure returns (bool) {
 
         // Verify signatures
         bytes32 hash;
@@ -28,11 +28,11 @@ library AddressLinker   {
 
         return recoveredAddress == address(buyerAddress);
     }
-
+    // RIF DAO: Visibility changed from public to internal
     function acceptDelegate(
         address buyerAddress, uint chainId,
         uint8 sig_v,
-        bytes32 sig_r, bytes32 sig_s) public pure returns (bool) {
+        bytes32 sig_r, bytes32 sig_s) internal pure returns (bool) {
 
         // Verify signatures
         bytes32 hash;

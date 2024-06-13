@@ -50,8 +50,8 @@ library AddressHelper {
         // Reaching this point means the ordinal is not for a hex char.
         revert();
     }
-
-    function fromAsciiString(string s) public pure returns(address) {
+    // RIF DAO: Visibility changed from public to internal
+    function fromAsciiString(string s) internal pure returns(address) {
         bytes memory ss = bytes(s);
 
         // it should have 40 or 42 characters
