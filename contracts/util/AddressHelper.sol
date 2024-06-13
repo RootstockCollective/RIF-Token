@@ -1,7 +1,8 @@
 pragma solidity ^0.4.24;
 
 library AddressHelper {
-    function recoverAddress(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public pure
+    // RIF DAO: Visibility changed from public to internal 
+    function recoverAddress(bytes32 hash, uint8 v, bytes32 r, bytes32 s) internal pure
         returns (address) {
         // Version of signature should be 27 or 28, but 0 and 1 are also possible versions
         uint8 vv = v;
